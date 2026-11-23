@@ -1,0 +1,5 @@
+.env*
+node_modules/
+dist/
+assets-roh/
+tools/.assets_cache.json
