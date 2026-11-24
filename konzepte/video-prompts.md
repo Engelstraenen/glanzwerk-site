@@ -25,3 +25,19 @@ Style: photorealistic, true-to-life colors, real rope access equipment, natural 
 
 ## V4 karriere (Start: GW-05 karriere) – Loop 6 s
 Locked-off portrait shot, the young technician on the roof at sunrise breathes naturally, a light breeze moves her ponytail, she smiles slightly and looks into the camera, the sun rises slowly behind the skyline. No cuts, no camera movement. Photorealistic. Avoid: morphing face, text, logos.
+
+
+---
+# FASSUNG 24.11.2026 (gilt): Dreamina Seedance 2.5, 16:9 · 720P, Unlimited, nur First Frame (2K Sunburst), 5–8 s, EINE Handlung, Aktion ab dem ersten Bild
+
+## V1 buero 8 s (Start GW-01)
+One continuous locked-off wide shot at standing eye height, NO cuts, very slow gentle push forward. ACTION STARTS IMMEDIATELY IN THE VERY FIRST FRAME, no still moment. Time-lapse of a professional night cleaning in this exact office: from the first frame one cleaning technician in a graphite work suit with mint green details guides a professional single-disc floor scrubbing machine in straight lanes across the dull stone floor from the back of the room towards the camera; every lane behind the machine turns into a deep glossy mirror finish reflecting the ceiling lights and the blue city lights. At the same time, in time-lapse, the cups, papers and full bins on the desks vanish and the chairs stand neatly under the desks. At the end the whole floor shines like a mirror and the office is perfectly tidy. The light stays night the whole time. Photorealistic, cinematic, true-to-life colors, natural motion, subtle film grain. Avoid: cuts, camera jumps, morphing people, machine or furniture, people appearing from nowhere, text, logos, CGI look.
+
+## V2 hof 8 s (Start GW-02)
+One continuous locked-off top-down drone shot from 40 m height, NO cuts, the drone hovers perfectly still. ACTION STARTS IMMEDIATELY IN THE VERY FIRST FRAME. Time-lapse: from the first frame the two technicians in graphite work suits with mint green details push their round rotating high-pressure surface cleaners in perfectly straight parallel lanes across the dark mossy courtyard; every lane they leave behind is bright light-grey and clean, the clean stripes grow side by side until the whole courtyard is bright and clean with a little water shine. Floodlights stay on, night. Photorealistic, true-to-life colors, natural motion. Avoid: cuts, camera movement, morphing, extra people, text, logos, CGI look.
+
+## V3 fassade 8 s (Start GW-03)
+One continuous shot, NO cuts, the camera slowly drifts upward along the facade. ACTION STARTS IMMEDIATELY IN THE VERY FIRST FRAME. From the first frame the rope access technician pulls the stainless steel squeegee in long horizontal strokes across the dusty glass, every stroke leaves a crystal clear stripe that reflects the pink dawn sky, he lowers himself slowly on his two ropes and continues; the clear area grows. His hands, squeegee and ropes stay visible the whole time. Photorealistic, true-to-life colors, real rope access equipment, natural motion. Avoid: cuts, morphing hands or tools, ropes disappearing, text, logos, CGI look.
+
+## V4 karriere 5 s Loop (Start GW-05)
+Locked-off portrait shot, from the first frame the young technician on the roof at sunrise breathes naturally, a light breeze moves her ponytail, she smiles slightly and looks into the camera, the sun light grows warmer. No cuts, no camera movement. Photorealistic. Avoid: morphing face, text, logos.

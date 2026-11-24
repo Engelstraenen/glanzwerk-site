@@ -9,7 +9,7 @@ Aufbau wie FLUTLICHT27/FARBKANTE: Film-Kapitel (Scroll spult Vorher → Arbeit �
 Branchenprobleme, die die Seite löst: Personal finden (Recruiting-Kapitel, Bewerbung in 60 s), Anfragen ohne Telefon-Pingpong (Fläche + Intervall + Fotos → Begehungstermin), Vertrauen (versichert, feste Teams, Schlüsselmanagement), Qualitätsnachweis (digitales Reinigungsprotokoll), Bewertungen (nur markierte Beispiele).
 
 ## 3. Regeln
-Medien nur sjinn Unlimited (0 Credits). Videos: Draft gratis, Endrender MiniMax H3 2K nur nach OK + Preis. Mobil-Check 4 Größen + Kopfzeile 1081–1600 px.
+Medien nur Unlimited (0 Credits). Ab 24.11.2026 (Eugen): Bilder NUR Dreamina GPT Image 2.5 Sunburst (2K, Medium, Unlimited; Alternativen Flare, Seedream 5.5), Videos Dreamina Seedance 2.5 720P Unlimited. Dreamina Unlimited = kontoweit 1 Auftrag gleichzeitig. Videos: Draft gratis, Endrender MiniMax H3 2K nur nach OK + Preis. Mobil-Check 4 Größen + Kopfzeile 1081–1600 px.
 
 ## 4. Skills/Plugins
 Keine extra (bei Motion-Kapiteln ggf. hyperframes nach OK).
@@ -35,6 +35,8 @@ sjinn.ai (Chrome eingeloggt) ✅ · GitHub Engelstraenen (gh) – vor Push prüf
 - 23.11.2026: Projektname GLANZWERK (Arbeitstitel), 3 Konzepte als Storyboards.
 - 23.11.2026 (Eugen): Look + Storytelling = 3 Nachtschicht (Graphit + Mint, leeres Büro nachts → morgens wie neu). Dazu Klarsicht (Glas/Fassade, Industriekletterer) und Die Bahn (Hochdruck, tausende m² Außenfläche) als Leistungen einbauen. Zwei Mix-Storyboards: MIX-A „Eine Nacht, ein Gebäude“, MIX-B „Die Einsatzzentrale“.
 - 23.11.2026 (Eugen): MIX-A gewählt = verbindliches Storyboard (konzepte/mix-a-eine-nacht.jpg).
+
+- 24.11.2026 (Eugen): Bilder nur Dreamina Sunburst/Flare/Seedream 5.5 (Unlimited), Webseitenbilder damit 2560×1440 statt 4K.
 
 ## 10. Ablage
 konzepte/ Storyboards + prompts.md · tools/sjinn_queue.js · site/ (folgt)

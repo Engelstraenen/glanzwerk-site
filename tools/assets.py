@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rohbilder (assets-roh/GW-xx.jpg) -> site/assets/img/<name>.webp (3840) + <name>-m.webp (1800) + img.js.
+"""Rohbilder (assets-roh/GW-xx.png|jpg) -> site/assets/img/<name>.webp (3840) + <name>-m.webp (1800) + img.js.
 Merkt sich Quelle+mtime (Cache), damit Dropbox unveränderte Quellen nicht neu lädt."""
 import json, os, sys, time
 from PIL import Image
@@ -13,8 +13,8 @@ cache_f = os.path.join(ROOT, 'tools/.assets_cache.json')
 cache = json.load(open(cache_f)) if os.path.exists(cache_f) else {}
 man = {}
 for gid, name in MAP.items():
-    src = os.path.join(RAW, gid + '.jpg')
-    if not os.path.exists(src):
+    src = next((os.path.join(RAW, gid + e) for e in ('.png', '.jpg') if os.path.exists(os.path.join(RAW, gid + e))), None)
+    if not src:
         continue
     key = f'{os.path.getmtime(src)}'
     if cache.get(name, {}).get('key') == key and all(os.path.exists(os.path.join(OUT, name + s + '.webp')) for s in SIZES):

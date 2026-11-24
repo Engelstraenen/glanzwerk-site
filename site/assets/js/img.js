@@ -1,1 +1,1 @@
-window.GW_IMG = {"_v": 31821};
+window.GW_IMG = {"nacht-buero": {"w": 2560, "h": 1440}, "_v": 99145};
