@@ -1,1 +1,1 @@
-window.GW_VID = {_v: 1};
+window.GW_VID = {_v: 2, buero: 1};
