@@ -23,14 +23,18 @@ sjinn.ai (Chrome eingeloggt) ✅ · GitHub Engelstraenen (gh) – vor Push prüf
 3. Seite bauen, prüfen, GitHub Pages
 
 ## 7. Befehle
-(folgt)
+- Vorschau: `python3 tools/serve.py 4412` → http://127.0.0.1:4412/ (Port 4412 gehört GLANZWERK)
+- Bilder: Rohbilder `assets-roh/GW-xx.jpg` → `python3 tools/assets.py` (WebP 3840/1800 + img.js)
+- Prüfen: `python3 tools/desktop_check.py`, `python3 tools/mobil_check.py`
+- GitHub: Engelstraenen/glanzwerk-site, Pages über Branch gh-pages (`git subtree split --prefix site`)
 
 ## 8. Offene Fragen
-Welcher Mix (A oder B)?
+–
 
 ## 9. Entschieden
 - 23.11.2026: Projektname GLANZWERK (Arbeitstitel), 3 Konzepte als Storyboards.
 - 23.11.2026 (Eugen): Look + Storytelling = 3 Nachtschicht (Graphit + Mint, leeres Büro nachts → morgens wie neu). Dazu Klarsicht (Glas/Fassade, Industriekletterer) und Die Bahn (Hochdruck, tausende m² Außenfläche) als Leistungen einbauen. Zwei Mix-Storyboards: MIX-A „Eine Nacht, ein Gebäude“, MIX-B „Die Einsatzzentrale“.
+- 23.11.2026 (Eugen): MIX-A gewählt = verbindliches Storyboard (konzepte/mix-a-eine-nacht.jpg).
 
 ## 10. Ablage
 konzepte/ Storyboards + prompts.md · tools/sjinn_queue.js · site/ (folgt)
