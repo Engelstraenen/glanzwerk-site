@@ -223,17 +223,39 @@
 
   /* ---------- Angebot: Konfigurator ---------- */
   var area = $('#area'), out = $('#m2'), cfg = $('#cfg');
-  var RATE = { innen: 220, glas: 70, aussen: 380 }, NAMES = { innen: 'Innen', glas: 'Glas', aussen: 'Außen' };
+  // Richtwerte: Büro täglich 150 m²/h, seltener 110 m²/h (Zeitstudien FIGR/RAL, Forum Verlag)
+  var RATE = { glas: 70, aussen: 380 }, NAMES = { innen: 'Innen', glas: 'Glas', aussen: 'Außen' };
+  var MAT = {
+    stein: ['Naturstein', 'Einscheibenmaschine mit Pad, kristallisieren statt wachsen', 'Kein Essig, keine Säure: greift Kalkstein an.'],
+    fliese: ['Fliese', 'Scheuersaugmaschine, Fugen mit Bürste', 'Fugen sind die Schmutzfalle, nicht die Fliese.'],
+    lino: ['Linoleum', 'Wischen nebelfeucht, Pflegefilm einmal im Quartal', 'Zu viel Wasser lässt Linoleum aufquellen.'],
+    parkett: ['Parkett', 'Feucht wischen mit Parkettpflege, nie nass', 'Pflegeöl statt Wachs bei geöltem Holz.'],
+    teppich: ['Teppich', 'Bürstsauger täglich, Sprühextraktion zweimal im Jahr', 'Flecken sofort, sonst werden sie Teil des Musters.']
+  };
   function m2() { var v = +area.value; return Math.max(100, Math.round(100 * Math.pow(200, v / 100) / 50) * 50); }
   function calc() {
     var a = m2(), arts = $$('input[name=art]:checked', cfg).map(function (i) { return i.value; });
     if (!arts.length) { $$('input[name=art]', cfg)[0].checked = true; arts = ['innen']; }
-    var h = arts.reduce(function (s, k) { return s + a / RATE[k]; }, 0);
+    var iv = +(($('input[name=int]:checked', cfg) || {}).value || 0), pz = +(($('input[name=pause]:checked', cfg) || {}).value || 0);
+    var rInnen = iv >= 5 ? 150 : 110;
+    var h = arts.reduce(function (s, k) { return s + a / (k === 'innen' ? rInnen : RATE[k]); }, 0);
     var team = Math.max(1, Math.ceil(h / 6)), per = Math.max(1, Math.round(h / team * 2) / 2);
+    var nights = iv ? Math.max(1, iv * (52 - pz)) : 1;
     out.textContent = fmt(a) + ' m²';
     area.style.setProperty('--v', area.value + '%');
     $('#r-h').textContent = 'ca. ' + String(per).replace('.', ',') + ' Std.';
     $('#r-t').textContent = team + (team > 1 ? ' Personen' : ' Person');
+    $('#r-n').textContent = fmt(nights);
+    $('#pz').textContent = pz ? pz + ' Wochen Pause' : 'keine';
+    var mk = (($('input[name=mat]:checked', cfg) || {}).value) || 'stein', M = MAT[mk];
+    $('#mat-info').innerHTML = '<b>' + M[1] + '.</b> ' + M[2];
+    var obj = ($('input[name=obj]:checked', cfg) || {}).value;
+    var li = ['Zutritt 22:04 · Schlüssel aus dem Tresor', obj + ' · ' + fmt(a) + ' m² · ' + arts.map(function (k) { return NAMES[k]; }).join(' + ')];
+    if (arts.indexOf('innen') > -1) li.push('Boden ' + M[0] + ': ' + M[1].split(',')[0]);
+    if (arts.indexOf('glas') > -1) li.push('Glas streifenfrei · 2 Fotos vom Seil');
+    if (arts.indexOf('aussen') > -1) li.push('Außenfläche hell · Vorher/Nachher-Foto');
+    li.push('Team ' + team + ' · fertig ' + (per > 7 ? '06:30' : '06:00') + ' · Schlüssel zurück');
+    $('#rep').innerHTML = li.map(function (t) { return '<li>' + t + '</li>'; }).join('');
   }
   function cfgSummary() {
     var arts = $$('input[name=art]:checked', cfg).map(function (i) { return NAMES[i.value]; }).join(' + ');
@@ -290,4 +312,38 @@
   else countUp();
   var qs = $$('.q'), qi = 0;
   setInterval(function () { qs[qi].classList.remove('on'); qi = (qi + 1) % qs.length; qs[qi].classList.add('on'); }, 5500);
+  /* ---------- V2.69: Vorher/Nachher-Schieber ---------- */
+  var ba = $('.ba');
+  if (ba) {
+    var rng = $('input[type=range]', ba), BA = { buero: ['nacht-buero', 'buero-sauber'], hof: ['hof-vorher', 'hof-sauber'] };
+    var src = function (n) { return 'assets/img/' + n + (mobile() ? '-m' : '') + '.webp?v=' + (IMG._v || 1); };
+    rng.addEventListener('input', function () { ba.style.setProperty('--x', rng.value + '%'); });
+    $$('input[name=ba]').forEach(function (r) {
+      r.addEventListener('change', function () {
+        var p = BA[r.value]; if (!IMG[p[0]] || !IMG[p[1]]) return;
+        $('.ba-a', ba).src = src(p[0]); $('.ba-b img', ba).src = src(p[1]);
+        rng.value = 50; ba.style.setProperty('--x', '50%');
+      });
+    });
+    if ('IntersectionObserver' in window) {
+      var ioB = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return; ioB.disconnect();
+        var t0 = performance.now();
+        (function st(t) { var k = clamp((t - t0) / 1800, 0, 1), x = 50 + Math.sin(k * Math.PI * 2) * 22 * (1 - k); ba.style.setProperty('--x', x + '%'); if (k < 1) requestAnimationFrame(st); })(t0);
+      }, { threshold: .5 });
+      ioB.observe(ba);
+    }
+  }
+
+  /* ---------- V2.69: Zahlen einblenden, Balken, Donut, Zähler ---------- */
+  function factIn(el) {
+    el.classList.add('in');
+    var d = $('.donut', el); if (d) { var c = $('.fgc', d), L = 2 * Math.PI * 50; c.style.strokeDasharray = (L * +d.getAttribute('data-p') / 100) + ' ' + L; }
+    var n = $('[data-count]', el); if (n) { var v = +n.getAttribute('data-count'), t0 = performance.now(); (function st(t) { var k = eout(clamp((t - t0) / 1800, 0, 1)); n.textContent = fmt(v * k); if (k < 1) requestAnimationFrame(st); })(t0); }
+  }
+  var rvs = $$('.rv');
+  if ('IntersectionObserver' in window) {
+    var ioR = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { factIn(e.target); ioR.unobserve(e.target); } }); }, { threshold: .35 });
+    rvs.forEach(function (el) { ioR.observe(el); });
+  } else rvs.forEach(factIn);
 })();

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=1">
+<link rel="stylesheet" href="assets/css/style.css?v=2">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c1012'/%3E%3Cpath d='M9 22 L16 8 L23 22' fill='none' stroke='%235eeab0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -100,6 +100,7 @@
           <h3>Unterhalts&shy;reinigung</h3>
           <ul><li>Büros, Praxen, Kanzleien</li><li>Sanitär, Küchen, Besprechungsräume</li><li>Bodenpflege mit Einscheibenmaschine</li><li>täglich, 3× pro Woche oder wöchentlich</li></ul>
           <p class="fix">Gelöst: Keine Reinigung mehr, die tagsüber im Weg steht.</p>
+          <a class="card-more" href="leistung-innen.html">So läuft die Nacht innen</a>
         </div>
       </article>
       <article class="card is-open" tabindex="0">
@@ -108,6 +109,7 @@
           <h3>Glas &amp; Fassade</h3>
           <ul><li>Fenster, Glasfassaden, Wintergärten</li><li>Seilzugang bis zum 18. Stock</li><li>Hebebühne und Reinwasser-Teleskop</li><li>Rahmen, Sonnenschutz, Lichtkuppeln</li></ul>
           <p class="fix">Gelöst: Durchblick ohne Gerüst und ohne Straßensperre.</p>
+          <a class="card-more" href="leistung-glas.html">So arbeiten wir am Seil</a>
         </div>
       </article>
       <article class="card" tabindex="0">
@@ -116,9 +118,31 @@
           <h3>Außen&shy;flächen</h3>
           <ul><li>Höfe, Parkdecks, Eingänge</li><li>Hochdruck mit Flächenreiniger</li><li>Moos, Algen, Kaugummi, Öl</li><li>Fugen neu verfüllen auf Wunsch</li></ul>
           <p class="fix">Gelöst: Tausende Quadratmeter in einer Nacht, ohne Absperrung am Tag.</p>
+          <a class="card-more" href="leistung-aussen.html">So wird der Hof wieder hell</a>
         </div>
       </article>
     </div>
+  </div>
+</section>
+
+
+<!-- KAPITEL 2b: VORHER / NACHHER (Interaktion) -->
+<section class="ch sec ba-sec" id="vorher-nachher">
+  <div class="wrap">
+    <p class="kicker">Vorher / Nachher</p>
+    <h2 class="h-sec">Schieben Sie<br><span class="mint">die Nacht weg.</span></h2>
+    <div class="chips ba-tabs" role="radiogroup" aria-label="Objekt wählen">
+      <label><input type="radio" name="ba" value="buero" checked><span>Büro innen</span></label>
+      <label><input type="radio" name="ba" value="hof"><span>Hof außen</span></label>
+    </div>
+    <div class="ba" data-need="nacht-buero">
+      <img class="ba-a" data-img="nacht-buero" alt="Vorher: Büro um 22 Uhr">
+      <div class="ba-b"><img data-img="buero-sauber" alt="Nachher: dasselbe Büro um 6 Uhr"></div>
+      <span class="ba-line"></span><span class="ba-knob">⇆</span>
+      <span class="ba-tag l">22:00 vorher</span><span class="ba-tag r">06:00 nachher</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Regler">
+    </div>
+    <p class="ba-note">Gleiche Kamera, gleicher Raum. Links bevor wir kommen, rechts wenn Ihr Team ins Büro kommt.</p>
   </div>
 </section>
 
@@ -180,6 +204,38 @@
   </div>
 </section>
 
+
+<!-- KAPITEL 4b: ZAHLEN (Diagramme mit echten Branchendaten) -->
+<section class="ch sec facts" id="zahlen">
+  <div class="wrap">
+    <p class="kicker">Zahlen aus der Branche</p>
+    <h2 class="h-sec">Rhythmus<br><span class="mint">spart Geld.</span></h2>
+    <div class="facts-grid">
+      <figure class="fact rv">
+        <h3>Wer öfter reinigt, reinigt schneller.</h3>
+        <div class="bars">
+          <div class="bar"><span>täglich</span><div class="tr"><div class="fl" style="--w:100%">150 m²/h</div></div></div>
+          <div class="bar b2"><span>jeden 2. Tag</span><div class="tr"><div class="fl" style="--w:73%">110 m²/h</div></div></div>
+        </div>
+        <p>Je weniger Schmutz sich festsetzt, desto mehr Fläche schafft eine Fachkraft pro Stunde. Darum rechnet unser Konfigurator mit diesen Richtwerten.</p>
+        <small>Richtwert Büroreinigung aus Zeitstudien (u. a. FIGR, RAL): <a href="https://shop.forum-verlag.com/media/pdf/LP_1805_objektarten.pdf" target="_blank" rel="noopener">Forum Verlag, Raumkonzepte</a></small>
+      </figure>
+      <figure class="fact rv">
+        <h3>Jede dritte Bürostunde für Formulare.</h3>
+        <div class="donut" data-p="33"><svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="50"/><circle class="fgc" cx="60" cy="60" r="50"/></svg><b>⅓</b></div>
+        <p>So viel Arbeitszeit geht in den Firmenzentralen der Branche für Bürokratie drauf. Bei uns läuft das Protokoll per App, Sie bekommen es um 6 Uhr aufs Handy.</p>
+        <small>BIV-Herbstumfrage 2025: <a href="https://www.deutsche-handwerks-zeitung.de/?p=370116" target="_blank" rel="noopener">Deutsche Handwerks Zeitung, 28.10.2025</a></small>
+      </figure>
+      <figure class="fact rv">
+        <h3>Das größte Handwerk Deutschlands.</h3>
+        <span class="big-n" data-count="1005213">0</span>
+        <p>Beschäftigungsverhältnisse in der Gebäudereinigung (2024), unterwegs in rund 100.000 Reinigungsobjekten. Ein sicherer Job, auch für Quereinsteiger.</p>
+        <small>Bundesinnungsverband / Statistisches Bundesamt: <a href="https://www.die-gebaeudedienstleister.de/wp-content/uploads/2026/07/260709_PM_Neue-Beschaeftigungsstatistik.pdf" target="_blank" rel="noopener">BIV, 09.07.2026</a></small>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- KAPITEL 5: ANGEBOT (Konfigurator) -->
 <section class="ch sec offer" id="angebot">
   <div class="wrap offer-grid">
@@ -209,6 +265,17 @@
         </div>
       </fieldset>
       <fieldset>
+        <legend>Bodenbelag</legend>
+        <div class="mat">
+          <label><input type="radio" name="mat" value="stein" checked><span><i style="--sw:linear-gradient(135deg,#cfcac2,#9e988f 60%,#bdb6ad)"></i>Naturstein</span></label>
+          <label><input type="radio" name="mat" value="fliese"><span><i style="--sw:repeating-linear-gradient(0deg,#d9dcdc 0 18px,#a9adad 18px 20px),#d9dcdc"></i>Fliese</span></label>
+          <label><input type="radio" name="mat" value="lino"><span><i style="--sw:linear-gradient(135deg,#7f9a8c,#5f7b6d)"></i>Linoleum</span></label>
+          <label><input type="radio" name="mat" value="parkett"><span><i style="--sw:repeating-linear-gradient(90deg,#b07c4f 0 14px,#9a6a41 14px 16px,#c08b5d 16px 30px)"></i>Parkett</span></label>
+          <label><input type="radio" name="mat" value="teppich"><span><i style="--sw:radial-gradient(#5d6266 1px,#474c50 1.5px) 0 0/5px 5px"></i>Teppich</span></label>
+        </div>
+        <p class="mat-info" id="mat-info"></p>
+      </fieldset>
+      <fieldset>
         <legend>Fläche <output id="m2">1.200 m²</output></legend>
         <input type="range" id="area" min="0" max="100" value="45" aria-label="Fläche in Quadratmetern">
       </fieldset>
@@ -222,13 +289,25 @@
         </div>
       </fieldset>
       <fieldset>
+        <legend>Betriebsferien <output id="pz">keine</output></legend>
+        <div class="chips">
+          <label><input type="radio" name="pause" value="0" checked><span>keine</span></label>
+          <label><input type="radio" name="pause" value="2"><span>2 Wochen</span></label>
+          <label><input type="radio" name="pause" value="4"><span>4 Wochen</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
         <legend>Fotos (optional)</legend>
         <label class="upload"><input type="file" id="pics" accept="image/*" multiple><span>Fotos auswählen</span><em id="picn">Hilft uns bei der Einschätzung</em></label>
       </fieldset>
       <div class="result" aria-live="polite">
         <div><small>Einsatz pro Nacht</small><b id="r-h">ca. 4 Std.</b></div>
         <div><small>Team</small><b id="r-t">1 Person</b></div>
-        <div><small>Fertig bis</small><b>06:00</b></div>
+        <div><small>Nächte pro Jahr</small><b id="r-n">250</b></div>
+      </div>
+      <div class="report" aria-live="polite">
+        <div class="rh">Ihr Morgenbericht <em>Vorschau · 06:00</em></div>
+        <ul id="rep"></ul>
       </div>
       <button class="btn btn-mint btn-wide" type="button" data-open="termin">Begehung buchen</button>
     </form>
@@ -358,6 +437,6 @@
 
 <script src="assets/js/img.js?v=1"></script>
 <script src="assets/js/vid.js?v=1"></script>
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
 </body>
 </html>
