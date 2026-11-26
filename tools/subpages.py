@@ -11,10 +11,7 @@ HEAD = '''<!doctype html>
 <title>{title} · Service Point Ratingen</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#0c1012">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 <link rel="icon" href="assets/img/logo-sp-mark.svg" type="image/svg+xml">
 </head>
 <body class="sub">

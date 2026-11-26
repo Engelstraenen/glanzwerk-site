@@ -27,6 +27,7 @@ sjinn.ai (Chrome eingeloggt) ✅ · GitHub Engelstraenen (gh) – vor Push prüf
 - Vorschau: `python3 tools/serve.py 4412` → http://127.0.0.1:4412/ (Port 4412 gehört GLANZWERK)
 - Bilder: Rohbilder `assets-roh/GW-xx.jpg` → `python3 tools/assets.py` (WebP 3840/1800 + img.js)
 - Prüfen: `python3 tools/desktop_check.py`, `python3 tools/mobil_check.py`
+- Videos gratis hochskalieren (720P → 2560×1440): `<venv>/bin/python tools/upscale_vid.py --gewichte RealESRGAN_x2plus.pth --in assets-roh/video/X.mp4 --out assets-roh/video/X-1440.mp4`, dann `tools/vid.sh X-1440 <name> [loop]` (Handy-Fassung 1920 px)
 - GitHub: Engelstraenen/service-point-site (vorher glanzwerk-site), Pages über Branch gh-pages (`git subtree split --prefix site`)
 
 ## 8. Offene Fragen

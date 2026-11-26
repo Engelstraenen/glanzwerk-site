@@ -6,5 +6,5 @@ src=assets-roh/video/$1.mp4; out=site/assets/vid/$2
 mkdir -p site/assets/vid
 if [[ "$3" == loop ]]; then g=30; else g=3; fi
 ffmpeg -v error -y -i $src -an -r 30 -c:v libx264 -preset slow -crf 20 -g $g -keyint_min 1 -pix_fmt yuv420p -movflags +faststart $out.mp4
-ffmpeg -v error -y -i $src -an -r 30 -c:v libx264 -preset slow -crf 24 -g $g -keyint_min 1 -pix_fmt yuv420p -movflags +faststart $out-m.mp4
+ffmpeg -v error -y -i $src -an -r 30 -c:v libx264 -preset slow -vf "scale=min(1920\,iw):-2:flags=lanczos" -crf 24 -g $g -keyint_min 1 -pix_fmt yuv420p -movflags +faststart $out-m.mp4
 ls -la $out.mp4 $out-m.mp4 | awk '{print $5, $9}'

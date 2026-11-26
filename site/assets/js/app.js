@@ -16,6 +16,7 @@
   var IMG = window.GW_IMG || {}, VID = window.GW_VID || {};
   $$('[data-img]').forEach(function (el) {
     var n = el.getAttribute('data-img');
+    if (el.hasAttribute('src')) return; // Startbild steht schon im HTML (Ladezeit)
     if (IMG[n]) { el.src = 'assets/img/' + n + (mobile() ? '-m' : '') + '.webp?v=' + (IMG._v || 1); el.decoding = 'async'; }
     else { el.removeAttribute('src'); el.style.display = 'none'; el.classList.add('missing'); }
   });
