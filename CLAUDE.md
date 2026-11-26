@@ -38,6 +38,7 @@ sjinn.ai (Chrome eingeloggt) ✅ · GitHub Engelstraenen (gh) – vor Push prüf
 - 23.11.2026 (Eugen): MIX-A gewählt = verbindliches Storyboard (konzepte/mix-a-eine-nacht.jpg).
 
 - 24.11.2026 (Eugen): Bilder nur Dreamina Sunburst/Flare/Seedream 5.5 (Unlimited), Webseitenbilder damit 2560×1440 statt 4K.
+- 26.11.2026 (Eugen): Demo-Versprechen (Nachtreinigung, Seilzugang, Begehung 48 h, Morgenbericht, Schlüsseltresor, Karriere-Benefits) bleiben drin, bis Tayyar sie prüft. Footer-Hinweis „Entwurf, mit dem Kunden abstimmen“ bleibt.
 
 ## 10. Ablage
 konzepte/ Storyboards + prompts.md · tools/sjinn_queue.js · site/ (folgt)
