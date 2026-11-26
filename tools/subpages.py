@@ -8,19 +8,20 @@ HEAD = '''<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{title} · GLANZWERK</title>
+<title>{title} · Service Point Ratingen</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#0c1012">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=2">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c1012'/%3E%3Cpath d='M9 22 L16 8 L23 22' fill='none' stroke='%235eeab0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="icon" href="assets/img/logo-sp-mark.svg" type="image/svg+xml">
 </head>
 <body class="sub">
 <header class="sub-nav">
   <div class="wrap">
     <a class="sub-back" href="index.html#leistungen">Alle Leistungen</a>
+    <a class="sub-brand" href="index.html" aria-label="Service Point Startseite"><img src="assets/img/logo-sp-mark.svg" alt=""></a>
     <a class="btn btn-mint" href="index.html#angebot">Angebot in 60 Sek.</a>
   </div>
 </header>
@@ -38,7 +39,11 @@ FOOT = '''
 </section>
 </main>
 <footer class="foot">
-  <p class="wrap foot-demo">Musterseite für Gebäudereinigungen. GLANZWERK ist ein erfundener Betrieb, alle Werte sind Beispiele, Branchenzahlen mit Quelle.</p>
+  <div class="wrap foot-grid">
+    <div><img class="foot-logo" src="assets/img/logo-sp.svg" alt="Service Point Dienstleistungen GmbH"></div>
+    <div><h4>Kontakt</h4><p>Preußenstr. 27, 40883 Ratingen<br><a href="tel:+4921021485962">02102 1485962</a><br><a href="mailto:info@service-point-ratingen.de">info@service-point-ratingen.de</a></p></div>
+  </div>
+  <p class="wrap foot-demo">Entwurf für die Service Point Dienstleistungen GmbH. Leistungsversprechen vor Veröffentlichung mit dem Kunden abstimmen. Impressum auf der Startseite.</p>
 </footer>
 <script src="assets/js/img.js?v=2"></script>
 <script src="assets/js/sub.js?v=1"></script>
@@ -116,10 +121,32 @@ PAGES = {
              ('Müssen Autos weg?', 'Nur von der Fläche, die in der Nacht dran ist. Wir planen Abschnitte, damit nicht alles gleichzeitig frei sein muss.'),
              ('Wie lange hält das?', 'Je nach Lage und Schatten ein bis zwei Jahre. Mit Fugenversiegelung deutlich länger.')],
         nexts=['innen', 'glas']),
+    'hausmeister': dict(
+        title='Hausmeisterservice', desc='Hausmeisterservice, Winterdienst, Gartenpflege und Sicherheitsdienst in Ratingen. Service Point Dienstleistungen GmbH.',
+        hero='morgen', kicker='Zusatzleistungen', h1='Alles rund ums Gebäude. <span class="mint">Aus einer Hand.</span>',
+        lead='Neben der Gebäudereinigung übernehmen wir die Aufgaben, die ein Gebäude jeden Tag stellt: zuverlässig, flexibel und mit festem Ansprechpartner.',
+        steps=[('Hausmeisterservice', 'Für die kleinen und großen Aufgaben des Alltags, zuverlässig und flexibel.'),
+               ('Winterdienst', 'Damit Wege und Eingänge auch in der kalten Jahreszeit sicher sind.'),
+               ('Gartenpflege', 'Pflege und Erhalt Ihrer Außenanlagen.'),
+               ('Sicherheitsdienst', 'Verlässlicher Schutz und Überwachung für Ihre Immobilie.')],
+        ba=None,
+        extra='''<section class="sub-sec"><div class="wrap">
+  <p class="kicker">Gebäude-Fullservice</p><h2 class="h-sec">Ein Paket. <span class="mint">Ein Anruf.</span></h2>
+  <div class="hm-grid">
+    <figure class="fact rv"><h3>Rundum-sorglos-Paket</h3><p>Reinigung, Hausmeister, Winterdienst und Außenanlagen in einem Vertrag, abgestimmt auf Ihr Gebäude.</p></figure>
+    <figure class="tm rv hm-person"><img data-img="team-ismail" alt="Ismail Cabuk"><figcaption><b>Ismail Cabuk</b><span>Ihr Hausmeister</span></figcaption></figure>
+  </div>
+</div></section>''',
+        faq=[('Kann ich Reinigung und Hausmeister kombinieren?', 'Ja. Mit dem Gebäude-Fullservice bekommen Sie beides aus einer Hand, abgestimmt auf Ihre Immobilie.'),
+             ('Für welche Gebäude?', 'Für Gewerbeobjekte, Mehrfamilienhäuser und Hausverwaltungen in Ratingen und Umgebung.'),
+             ('Wie erreiche ich Sie?', 'Telefon 02102 1485962, mobil 0162 6083624 oder per Mail an info@service-point-ratingen.de.')],
+        nexts=['innen', 'aussen']),
 }
-NAMES = {'innen': ('Unterhaltsreinigung', 'l-innen'), 'glas': ('Glas & Fassade', 'l-glas'), 'aussen': ('Außenflächen', 'l-aussen')}
+NAMES = {'innen': ('Unterhaltsreinigung', 'l-innen'), 'glas': ('Glas & Fassade', 'l-glas'), 'aussen': ('Außenflächen', 'l-aussen'), 'hausmeister': ('Hausmeisterservice', 'morgen')}
 
 for key, P in PAGES.items():
+    steps_k = 'Leistungen' if key == 'hausmeister' else 'Ablauf'
+    steps_h = 'Was wir <span class="mint">übernehmen.</span>' if key == 'hausmeister' else 'So läuft <span class="mint">die Nacht.</span>'
     steps = ''.join(f'<li class="rv"><h3>{t}</h3><p>{d}</p></li>' for t, d in P['steps'])
     ba = ''
     if P['ba']:
@@ -143,7 +170,7 @@ for key, P in PAGES.items():
   </div>
 </section>
 <section class="sub-sec"><div class="wrap">
-  <p class="kicker">Ablauf</p><h2 class="h-sec">So läuft <span class="mint">die Nacht.</span></h2>
+  <p class="kicker">{steps_k}</p><h2 class="h-sec">{steps_h}</h2>
   <ol class="steps4">{steps}</ol>
 </div></section>
 {ba}

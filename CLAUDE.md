@@ -1,8 +1,9 @@
-# PROJEKT-MASTERFILE – GLANZWERK
+# PROJEKT-MASTERFILE – SERVICE POINT GMBH (vorher GLANZWERK)
 Gilt zusätzlich zur globalen Masterfile (~/.claude/CLAUDE.md).
 
 ## 1. Ziel und Endprodukt
-Musterwebseite (Demo) für Reinigungsfirmen / Gebäudereinigung, erfundene Firma GLANZWERK. Modern, cool, praxisnah, löst Branchenprobleme. Gleiche Liga wie WARMHERZ, FARBKANTE, LICHTBOGEN.
+AB 26.11.2026: Webseite für die echte Firma Service Point Dienstleistungen GmbH, Preußenstr. 27, 40883 Ratingen (GF Melih Tayyar Celik, Freund von Eugen). Kerngeschäft Gebäudereinigung gewerblich + privat; Hausmeisterservice/Winterdienst/Gartenpflege/Sicherheitsdienst als Unterseite leistung-hausmeister.html. Team: Tayyar Celik (GF), Cennet Cabuk (kaufm. Leitung), Ismail Cabuk (Hausmeister), Ilker Sahin (Objektleitung) – Fotos von service-point-ratingen.de (Dateinamen Murat/Hayrettin, Zuordnung wie auf seiner Seite). Logo als Vektor in Seiten-CI (tools/logo_sp.py → site/assets/img/logo-sp*.svg). Impressum 1:1 seine Angaben. Google 4,6 ★ / 11 (Stand 26.11.2026), kein Trustpilot. Alte Seite: service-point-ratingen.de (Zahlen 100+ Gebäude, 450+ Aufträge).
+Ursprung: Musterwebseite (Demo) für Reinigungsfirmen / Gebäudereinigung, erfundene Firma GLANZWERK. Modern, cool, praxisnah, löst Branchenprobleme. Gleiche Liga wie WARMHERZ, FARBKANTE, LICHTBOGEN.
 
 ## 2. Qualitätsanspruch & Referenzen
 Aufbau wie FLUTLICHT27/FARBKANTE: Film-Kapitel (Scroll spult Vorher → Arbeit → Ergebnis) im Wechsel mit Motion-Design-Kapiteln. Leitmotiv eindeutig Profi-Reinigung (Industriekletterer + Abzieher, Hochdruck-Flächenreiniger, Einscheibenmaschine).
@@ -26,7 +27,7 @@ sjinn.ai (Chrome eingeloggt) ✅ · GitHub Engelstraenen (gh) – vor Push prüf
 - Vorschau: `python3 tools/serve.py 4412` → http://127.0.0.1:4412/ (Port 4412 gehört GLANZWERK)
 - Bilder: Rohbilder `assets-roh/GW-xx.jpg` → `python3 tools/assets.py` (WebP 3840/1800 + img.js)
 - Prüfen: `python3 tools/desktop_check.py`, `python3 tools/mobil_check.py`
-- GitHub: Engelstraenen/glanzwerk-site, Pages über Branch gh-pages (`git subtree split --prefix site`)
+- GitHub: Engelstraenen/service-point-site (vorher glanzwerk-site), Pages über Branch gh-pages (`git subtree split --prefix site`)
 
 ## 8. Offene Fragen
 –

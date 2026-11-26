@@ -15,7 +15,7 @@ with sync_playwright() as p:
         pg.on('console', lambda m: m.type == 'error' and errs.append(f'{w}: {m.text}'))
         pg.on('pageerror', lambda e: errs.append(f'{w}: {e}'))
         pg.goto(BASE, wait_until='load'); pg.wait_for_timeout(800)
-        for sel in ['#vorher-nachher', '#zahlen', '#angebot']:
+        for sel in ['#leistungen', '#vorher-nachher', '#team', '#zahlen', '#angebot', '#bewertungen']:
             pg.evaluate(f"document.querySelector('{sel}').scrollIntoView({{block:'start'}})")
             pg.wait_for_timeout(2200)
             pg.screenshot(path=f'{OUT}{w}x{h}_{sel[1:]}.jpg', type='jpeg', quality=70)
@@ -27,7 +27,7 @@ with sync_playwright() as p:
         info = pg.evaluate("[document.querySelector('#r-n').textContent, document.querySelector('#mat-info').textContent.slice(0,40), document.querySelectorAll('#rep li').length]")
         sx = pg.evaluate('document.documentElement.scrollWidth - innerWidth')
         print(w, h, 'index querscroll', sx, info)
-        for k in ['innen', 'glas', 'aussen']:
+        for k in ['innen', 'glas', 'aussen', 'hausmeister']:
             pg.goto(BASE + f'leistung-{k}.html', wait_until='load'); pg.wait_for_timeout(900)
             pg.screenshot(path=f'{OUT}{w}x{h}_sub-{k}-0.jpg', type='jpeg', quality=70)
             hh = pg.evaluate('document.documentElement.scrollHeight')

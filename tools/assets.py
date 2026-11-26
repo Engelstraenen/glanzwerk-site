@@ -6,7 +6,8 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW, OUT = os.path.join(ROOT, 'assets-roh'), os.path.join(ROOT, 'site/assets/img')
 MAP = {'GW-01': 'nacht-buero', 'GW-02': 'hof-vorher', 'GW-03': 'fassade', 'GW-04': 'morgen', 'GW-05': 'karriere',
-       'GW-06': 'buero-sauber', 'GW-07': 'hof-sauber', 'GW-08': 'l-innen', 'GW-09': 'l-glas', 'GW-10': 'l-aussen'}
+       'GW-06': 'buero-sauber', 'GW-07': 'hof-sauber', 'GW-08': 'l-innen', 'GW-09': 'l-glas', 'GW-10': 'l-aussen',
+       'SP-TAYYAR': 'team-tayyar', 'SP-CENNET': 'team-cennet', 'SP-ISMAIL': 'team-ismail', 'SP-ILKER': 'team-ilker'}
 SIZES = {'': 3840, '-m': 1800}
 os.makedirs(OUT, exist_ok=True)
 cache_f = os.path.join(ROOT, 'tools/.assets_cache.json')

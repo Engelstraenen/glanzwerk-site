@@ -1,4 +1,4 @@
-/* GLANZWERK – Musterseite Gebäudereinigung. Vanilla-JS, alles hängt an der Scroll-Position. */
+/* Service Point – Gebäudereinigung Ratingen. Vanilla-JS, alles hängt an der Scroll-Position. */
 (function () {
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -339,7 +339,7 @@
   function factIn(el) {
     el.classList.add('in');
     var d = $('.donut', el); if (d) { var c = $('.fgc', d), L = 2 * Math.PI * 50; c.style.strokeDasharray = (L * +d.getAttribute('data-p') / 100) + ' ' + L; }
-    var n = $('[data-count]', el); if (n) { var v = +n.getAttribute('data-count'), t0 = performance.now(); (function st(t) { var k = eout(clamp((t - t0) / 1800, 0, 1)); n.textContent = fmt(v * k); if (k < 1) requestAnimationFrame(st); })(t0); }
+    $$('[data-count]', el).forEach(function (n) { var v = +n.getAttribute('data-count'), t0 = performance.now(); (function st(t) { var k = eout(clamp((t - t0) / 1800, 0, 1)); n.textContent = fmt(v * k); if (k < 1) requestAnimationFrame(st); })(t0); });
   }
   var rvs = $$('.rv');
   if ('IntersectionObserver' in window) {
